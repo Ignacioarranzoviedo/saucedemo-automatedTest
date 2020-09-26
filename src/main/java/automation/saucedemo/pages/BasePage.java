@@ -1,4 +1,4 @@
-package com.automation.saucedemo.pages;
+package automation.saucedemo.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

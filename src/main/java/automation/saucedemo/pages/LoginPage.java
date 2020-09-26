@@ -1,11 +1,11 @@
-package com.automation.saucedemo.pages;
+package automation.saucedemo.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginScreen extends BasePage {
+public class LoginPage extends BasePage {
     private String baseURL = "https://www.saucedemo.com/index.html";
 
     @FindBy(id = "login-button")
@@ -17,12 +17,12 @@ public class LoginScreen extends BasePage {
     @FindBy(id = "password")
     private WebElement passwordInput;
 
-    public LoginScreen(WebDriver driver) {
+    public LoginPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
     }
 
-    public LoginScreen goToThePage() {
+    public LoginPage goToThePage() {
         driver.get(baseURL);
         return this;
     }
