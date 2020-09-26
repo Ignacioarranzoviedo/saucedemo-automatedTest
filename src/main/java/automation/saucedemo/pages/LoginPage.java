@@ -33,4 +33,8 @@ public class LoginPage extends BasePage {
         writeText(passwordInput, password);
         loginButton.click();
     }
+
+    public String validateLoginPage() {
+        return exists(loginButton);
+    }
 }

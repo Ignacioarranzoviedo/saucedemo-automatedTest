@@ -10,6 +10,9 @@ public class YourCartPage extends BasePage {
     @FindBy(xpath = "//a[@href='/docs/configuration'")
     private WebElement checkoutButton;
 
+    @FindBy(id = "item_4_title_link")
+    private WebElement suceLabsBackpackInventory;
+
     public YourCartPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
@@ -18,6 +21,10 @@ public class YourCartPage extends BasePage {
     public void goToCheckout() {
         waitVisibility(checkoutButton);
         checkoutButton.click();
+    }
+
+    public String validateInventory() {
+        return exists(suceLabsBackpackInventory);
     }
 
 }
