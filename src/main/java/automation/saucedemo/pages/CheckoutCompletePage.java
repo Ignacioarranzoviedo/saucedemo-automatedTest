@@ -21,7 +21,7 @@ public class CheckoutCompletePage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    public void goToCheckout() {
+    public void logout() {
         waitVisibility(checkoutCompleteContainer);
         sideMenuButton.click();
         waitVisibility(logoutSidebarButton);
