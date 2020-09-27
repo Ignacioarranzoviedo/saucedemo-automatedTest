@@ -5,7 +5,8 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         features = "src/test/resource/features",
-        glue= {"automation.saucedemo.stepDefinitions"}
+        tags = {"@FirstFlow", "~@Ignore", "~@WIP"},
+        glue = {"automation.saucedemo.stepDefinitions"}
 )
 public class FirstFlowRunner {
 
