@@ -1,4 +1,4 @@
-@WIP
+@FirstFlow
 Feature: Saucedemo first flow
 
   Background:
