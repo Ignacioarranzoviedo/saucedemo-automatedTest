@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class HomePage extends BasePage{
 
-    @FindBy(xpath = "//*[@id='inventory_container']/div/div[3]/div[3]/button")
+    @FindBy(xpath = "//*[@id='inventory_container']/div/div[1]/div[3]/button")
     private WebElement sauceLabsBackpackAddToCart;
 
     @FindBy(id = "shopping_cart_container")

@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class YourCartPage extends BasePage {
 
-    @FindBy(xpath = "//a[@href='/docs/configuration'")
+    @FindBy(xpath = "//*[@id='cart_contents_container']/div/div[2]/a[2]")
     private WebElement checkoutButton;
 
     @FindBy(id = "item_4_title_link")

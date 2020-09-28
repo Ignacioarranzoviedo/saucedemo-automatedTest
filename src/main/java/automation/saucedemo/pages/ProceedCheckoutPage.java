@@ -21,7 +21,7 @@ public class ProceedCheckoutPage extends BasePage{
     @FindBy(id = "postal-code")
     private WebElement zipOrPostalCodeInput;
 
-    @FindBy(className = "btn_primary.cart_button")
+    @FindBy(xpath = "//*[@id='checkout_info_container']/div/form/div[2]/input")
     private WebElement continueButton;
 
     public ProceedCheckoutPage(WebDriver driver) {

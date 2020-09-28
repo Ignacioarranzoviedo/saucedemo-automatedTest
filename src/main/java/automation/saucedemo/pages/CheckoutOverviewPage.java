@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class CheckoutOverviewPage extends BasePage {
 
-    @FindBy(className = "btn_action.cart_button")
+    @FindBy(xpath = "//*[@id='checkout_summary_container']/div/div[2]/div[8]/a[2]")
     private WebElement finishButton;
 
     public CheckoutOverviewPage(WebDriver driver) {
