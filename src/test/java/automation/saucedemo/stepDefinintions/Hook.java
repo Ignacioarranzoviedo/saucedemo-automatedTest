@@ -2,6 +2,7 @@ package automation.saucedemo.stepDefinintions;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -23,6 +24,9 @@ public class Hook {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
+        //WebDriverManager.firefoxdriver().setup();
+        //driver = new FirefoxDriver();
+        //driver.manage().window().maximize();
     }
 
     @After
