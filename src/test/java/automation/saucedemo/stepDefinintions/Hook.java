@@ -1,6 +1,7 @@
 package automation.saucedemo.stepDefinintions;
 
 import automation.saucedemo.config.Configuration;
+import automation.saucedemo.config.RemoteBrowserSet;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -28,7 +29,7 @@ public class Hook {
         driver = null;
 
         if (config.getIsGridRun()) {
-            //driver = RemoteBrowserSet.getRemoteWebDriver();
+            driver = RemoteBrowserSet.getRemoteWebDriver();
         } else {
             if (browser.equals("chrome")) {
                 WebDriverManager.chromedriver().setup();

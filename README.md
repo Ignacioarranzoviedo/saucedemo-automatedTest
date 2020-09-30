@@ -19,7 +19,7 @@ git clone https://github.com/Ignacioarranzoviedo/saucedemo-automatedTest.git
 ```
 mvn install verify
 ```
-You can execute the test suite in different browser (by default chrome): 'browser.type' - src/test/java/automation/saucedemo/config/configuration.properties
+You can execute the test suite in different browser (by default chrome): 'browser.type =' - src/test/java/automation/saucedemo/config/configuration.properties
 
 ## Technologies 🛠️
 
