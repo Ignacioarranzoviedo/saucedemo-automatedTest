@@ -1,7 +1,7 @@
 package automation.saucedemo.stepDefinintions;
 
 import automation.saucedemo.config.Configuration;
-import automation.saucedemo.config.BrowserFactory;
+//import automation.saucedemo.config.BrowserFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 
@@ -32,7 +32,7 @@ public class Hook {
 
         if (config.getIsGridRun()) {
 
-            driver = BrowserFactory.getRemoteWebDriver();
+            //driver = BrowserFactory.getRemoteWebDriver();
 
         } else {
 
