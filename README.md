@@ -13,6 +13,7 @@ You must have installed GIT A MAVEN in your local
 ### Installation 🔧
 ```
 git clone https://github.com/Ignacioarranzoviedo/saucedemo-automatedTest.git
+cd saucedemo-automatedTest
 ```
 
 ## Test execution ⚙️

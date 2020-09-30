@@ -1,12 +1,11 @@
 package automation.saucedemo.stepDefinintions;
 
+import automation.saucedemo.config.Configuration;
+import automation.saucedemo.config.BrowserFactory;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Hook {
     private static WebDriver driver;
@@ -20,13 +19,35 @@ public class Hook {
     }
 
     @Before
-    public static void setupClass() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        //WebDriverManager.firefoxdriver().setup();
-        //driver = new FirefoxDriver();
-        //driver.manage().window().maximize();
+    public void beforeScenario() throws Exception {
+
+        Configuration config = Configuration.getConfiguration();
+
+        String browser = config.getBrowserType();
+
+        WebDriver driver = null;
+
+        if (config.getIsGridRun()) {
+
+            driver = BrowserFactory.getRemoteWebDriver();
+
+        } else {
+
+            if (browser.equals("chrome")) {
+                driver = BrowserFactory.getChromeDriver();
+
+            } else if (browser.equals("firefox")) {
+                driver = BrowserFactory.getFireFoxDriver();
+
+            } else if (browser.equals("internetexplorer")) {
+                //driver = BrowserFactory.getInternetExploerDriver();
+
+            } else {
+                throw new Exception();
+            }
+            //maximise window
+            driver.manage().window().maximize();
+        }
     }
 
     @After
