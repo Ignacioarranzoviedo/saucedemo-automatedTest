@@ -32,7 +32,7 @@ public class Hook {
 
         if (config.getIsGridRun()) {
 
-            //driver = BrowserFactory.getRemoteWebDriver();
+            //driver = RemoteBrowserSet.getRemoteWebDriver();
 
         } else {
 
@@ -45,7 +45,8 @@ public class Hook {
                 driver = new FirefoxDriver();
 
             } else if (browser.equals("internetexplorer")) {
-                //driver = BrowserFactory.getInternetExploerDriver();
+                //WebDriverManager.iedriver().setup();
+                //driver = new ieDriver();
 
             } else {
                 throw new Exception();
