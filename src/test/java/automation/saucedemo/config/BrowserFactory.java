@@ -1,5 +1,6 @@
 package automation.saucedemo.config;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -15,24 +16,6 @@ public class BrowserFactory {
 
     private static WebDriver driver = null;
 
-
-
-    public static WebDriver getFireFoxDriver() {
-        driver = new FirefoxDriver();
-
-        return driver;
-    }
-
-    public static WebDriver getChromeDriver() {
-
-        driver = new ChromeDriver();
-
-        return driver;
-    }
-
-    public static WebDriver getDriver() {
-        return driver;
-    }
 
     public static WebDriver getRemoteWebDriver() throws Exception {
 

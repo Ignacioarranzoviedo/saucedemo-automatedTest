@@ -2,10 +2,13 @@ package automation.saucedemo.stepDefinintions;
 
 import automation.saucedemo.config.Configuration;
 import automation.saucedemo.config.BrowserFactory;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Hook {
     private static WebDriver driver;
@@ -34,10 +37,12 @@ public class Hook {
         } else {
 
             if (browser.equals("chrome")) {
-                driver = BrowserFactory.getChromeDriver();
+                WebDriverManager.chromedriver().setup();
+                driver = new ChromeDriver();
 
             } else if (browser.equals("firefox")) {
-                driver = BrowserFactory.getFireFoxDriver();
+                WebDriverManager.firefoxdriver().setup();
+                driver = new FirefoxDriver();
 
             } else if (browser.equals("internetexplorer")) {
                 //driver = BrowserFactory.getInternetExploerDriver();
