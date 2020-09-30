@@ -1,0 +1,41 @@
+{
+  "capabilities": [
+    {
+      "browserName": "firefox",
+      "firefox_binary": "C:/Program Files (x86)/firefoxes/Mozilla Firefox/firefox.exe",
+      "marionette": "true",
+      "version": "52",
+      "platform": "VISTA",
+      "maxInstances": 5,
+      "seleniumProtocol": "WebDriver"
+    },
+    {
+      "browserName": "chrome",
+      "version": "71",
+      "platform": "VISTA",
+      "maxInstances": 5,
+      "seleniumProtocol": "WebDriver"
+    },
+    {
+      "browserName": "internet explorer",
+      "platform": "VISTA",
+      "maxInstances": 1,
+      "seleniumProtocol": "WebDriver"
+    }
+  ],
+  "proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
+  "maxSession": 5,
+  "port": 5555,
+  "register": true,
+  "registerCycle": 5000,
+  "hub": "http://25.94.115.86:4444",
+  "nodeStatusCheckTimeout": 5000,
+  "nodePolling": 5000,
+  "role": "node",
+  "unregisterIfStillDownAfter": 60000,
+  "downPollingLimit": 2,
+  "debug": false,
+  "servlets": [],
+  "withoutServlets": [],
+  "custom": {}
+}
